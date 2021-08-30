@@ -21,6 +21,8 @@
 		8AFDC5B726DC96E700BE2D76 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5B526DC96E700BE2D76 /* Artist.swift */; };
 		8AFDC5B926DC970300BE2D76 /* ArtistStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5B826DC970300BE2D76 /* ArtistStore.swift */; };
 		8AFDC5BA26DC970300BE2D76 /* ArtistStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5B826DC970300BE2D76 /* ArtistStore.swift */; };
+		8AFDC5BC26DC981800BE2D76 /* ArtAtLCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5BB26DC981800BE2D76 /* ArtAtLCS.swift */; };
+		8AFDC5BD26DC981800BE2D76 /* ArtAtLCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5BB26DC981800BE2D76 /* ArtAtLCS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		8AFDC5B226DC965800BE2D76 /* ArtworkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkStore.swift; sourceTree = "<group>"; };
 		8AFDC5B526DC96E700BE2D76 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		8AFDC5B826DC970300BE2D76 /* ArtistStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistStore.swift; sourceTree = "<group>"; };
+		8AFDC5BB26DC981800BE2D76 /* ArtAtLCS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtAtLCS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 		8AFDC5A726DC94AA00BE2D76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AFDC5BB26DC981800BE2D76 /* ArtAtLCS.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFDC5BC26DC981800BE2D76 /* ArtAtLCS.swift in Sources */,
 				8AFDC5B326DC965800BE2D76 /* ArtworkStore.swift in Sources */,
 				8AFDC59A26DC924200BE2D76 /* ContentView.swift in Sources */,
 				8AFDC5AD26DC962C00BE2D76 /* Artwork.swift in Sources */,
@@ -211,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFDC5BD26DC981800BE2D76 /* ArtAtLCS.swift in Sources */,
 				8AFDC5B426DC965800BE2D76 /* ArtworkStore.swift in Sources */,
 				8AFDC59B26DC924200BE2D76 /* ContentView.swift in Sources */,
 				8AFDC5AE26DC962C00BE2D76 /* Artwork.swift in Sources */,
