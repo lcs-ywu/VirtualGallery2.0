@@ -144,7 +144,6 @@
 		8AFDC62726DE9C1900BE2D76 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetail.swift; sourceTree = "<group>"; };
 		8AFDC62D26DE9E1300BE2D76 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
-		8AFDC63026DE9E7100BE2D76 /* DebugPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DebugPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8AFDC63226DE9F5300BE2D76 /* PrinciplesOfDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinciplesOfDesign.swift; sourceTree = "<group>"; };
 		8AFDC63326DE9F5300BE2D76 /* PurposeOfArt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposeOfArt.swift; sourceTree = "<group>"; };
 		8AFDC63426DE9F5300BE2D76 /* Surrealism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Surrealism.swift; sourceTree = "<group>"; };
@@ -199,7 +198,6 @@
 				8AFDC5A626DC949700BE2D76 /* Model */,
 				8AFDC64A26DE9F5900BE2D76 /* Concepts */,
 				8AFDC5A726DC94AA00BE2D76 /* View */,
-				8AFDC63026DE9E7100BE2D76 /* DebugPlayground.playground */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
