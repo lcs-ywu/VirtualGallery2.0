@@ -71,6 +71,8 @@
 		8AFDC62926DE9C1900BE2D76 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC62726DE9C1900BE2D76 /* Favourites.swift */; };
 		8AFDC62B26DE9C6F00BE2D76 /* ArtworkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */; };
 		8AFDC62C26DE9C6F00BE2D76 /* ArtworkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */; };
+		8AFDC62E26DE9E1300BE2D76 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC62D26DE9E1300BE2D76 /* Placeholder.swift */; };
+		8AFDC62F26DE9E1300BE2D76 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC62D26DE9E1300BE2D76 /* Placeholder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +111,8 @@
 		8AFDC62426DE9BFA00BE2D76 /* Contributors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributors.swift; sourceTree = "<group>"; };
 		8AFDC62726DE9C1900BE2D76 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetail.swift; sourceTree = "<group>"; };
+		8AFDC62D26DE9E1300BE2D76 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		8AFDC63026DE9E7100BE2D76 /* DebugPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DebugPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 				8AFDC58C26DC924200BE2D76 /* Assets.xcassets */,
 				8AFDC5A626DC949700BE2D76 /* Model */,
 				8AFDC5A726DC94AA00BE2D76 /* View */,
+				8AFDC63026DE9E7100BE2D76 /* DebugPlayground.playground */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				8AFDC62426DE9BFA00BE2D76 /* Contributors.swift */,
 				8AFDC62726DE9C1900BE2D76 /* Favourites.swift */,
 				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */,
+				8AFDC62D26DE9E1300BE2D76 /* Placeholder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 				8AFDC5CB26DC9A4A00BE2D76 /* ArtHistoryView.swift in Sources */,
 				8AFDC5D526DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */,
 				8AFDC60F26DE984700BE2D76 /* ArtworksList.swift in Sources */,
+				8AFDC62E26DE9E1300BE2D76 /* Placeholder.swift in Sources */,
 				8AFDC5B626DC96E700BE2D76 /* Artist.swift in Sources */,
 				8AFDC60826DE96A600BE2D76 /* CDSideMenuMainView.swift in Sources */,
 				8AFDC60C26DE973000BE2D76 /* MyContentView.swift in Sources */,
@@ -396,6 +403,7 @@
 				8AFDC5CC26DC9A4A00BE2D76 /* ArtHistoryView.swift in Sources */,
 				8AFDC5D626DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */,
 				8AFDC61026DE984700BE2D76 /* ArtworksList.swift in Sources */,
+				8AFDC62F26DE9E1300BE2D76 /* Placeholder.swift in Sources */,
 				8AFDC5B726DC96E700BE2D76 /* Artist.swift in Sources */,
 				8AFDC60926DE96A600BE2D76 /* CDSideMenuMainView.swift in Sources */,
 				8AFDC60D26DE973000BE2D76 /* MyContentView.swift in Sources */,
