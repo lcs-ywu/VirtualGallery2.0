@@ -48,4 +48,3 @@ func getArtist(named name: String) -> Artist {
         return Artist(name: "Error", age: "404", identity: "Computational Error Designer", infor: "10001011", artistStatement: "00100100", LCSArtist: false, works: [])
     }
 }
-
