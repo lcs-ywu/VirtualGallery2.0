@@ -31,6 +31,8 @@
 		8AFDC5CF26DC9A6600BE2D76 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5CD26DC9A6600BE2D76 /* FavouriteView.swift */; };
 		8AFDC5D526DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5D426DE91D500BE2D76 /* SharedFunctionAndConstants.swift */; };
 		8AFDC5D626DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5D426DE91D500BE2D76 /* SharedFunctionAndConstants.swift */; };
+		8AFDC5D826DE95D900BE2D76 /* ArtPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5D726DE95D900BE2D76 /* ArtPeriod.swift */; };
+		8AFDC5D926DE95D900BE2D76 /* ArtPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5D726DE95D900BE2D76 /* ArtPeriod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,7 @@
 		8AFDC5CA26DC9A4A00BE2D76 /* ArtHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHistoryView.swift; sourceTree = "<group>"; };
 		8AFDC5CD26DC9A6600BE2D76 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		8AFDC5D426DE91D500BE2D76 /* SharedFunctionAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionAndConstants.swift; sourceTree = "<group>"; };
+		8AFDC5D726DE95D900BE2D76 /* ArtPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtPeriod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +300,7 @@
 				8AFDC5AC26DC962C00BE2D76 /* Artwork.swift */,
 				8AFDC5B526DC96E700BE2D76 /* Artist.swift */,
 				8AFDC5D426DE91D500BE2D76 /* SharedFunctionAndConstants.swift */,
+				8AFDC5D726DE95D900BE2D76 /* ArtPeriod.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -435,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFDC5D826DE95D900BE2D76 /* ArtPeriod.swift in Sources */,
 				8AFDC5C526DC99EE00BE2D76 /* SearchView.swift in Sources */,
 				8AFDC59A26DC924200BE2D76 /* ContentView.swift in Sources */,
 				8AFDC5AD26DC962C00BE2D76 /* Artwork.swift in Sources */,
@@ -453,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFDC5D926DE95D900BE2D76 /* ArtPeriod.swift in Sources */,
 				8AFDC5C626DC99EE00BE2D76 /* SearchView.swift in Sources */,
 				8AFDC59B26DC924200BE2D76 /* ContentView.swift in Sources */,
 				8AFDC5AE26DC962C00BE2D76 /* Artwork.swift in Sources */,
