@@ -10,8 +10,6 @@
 		19E85F5B26DEA24A0045C05D /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 19E85F5A26DEA24A0045C05D /* ACarousel */; };
 		8AFDC59826DC924200BE2D76 /* VirtualGallery2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */; };
 		8AFDC59926DC924200BE2D76 /* VirtualGallery2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */; };
-		8AFDC59A26DC924200BE2D76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58B26DC923900BE2D76 /* ContentView.swift */; };
-		8AFDC59B26DC924200BE2D76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58B26DC923900BE2D76 /* ContentView.swift */; };
 		8AFDC59C26DC924200BE2D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFDC58C26DC924200BE2D76 /* Assets.xcassets */; };
 		8AFDC59D26DC924200BE2D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFDC58C26DC924200BE2D76 /* Assets.xcassets */; };
 		8AFDC5AD26DC962C00BE2D76 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC5AC26DC962C00BE2D76 /* Artwork.swift */; };
@@ -94,7 +92,6 @@
 
 /* Begin PBXFileReference section */
 		8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualGallery2_0App.swift; sourceTree = "<group>"; };
-		8AFDC58B26DC923900BE2D76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8AFDC58C26DC924200BE2D76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AFDC59126DC924200BE2D76 /* VirtualGallery2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualGallery2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFDC59726DC924200BE2D76 /* VirtualGallery2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualGallery2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,7 +168,6 @@
 			children = (
 				8AFDC5DA26DE96A500BE2D76 /* CDSideMenuSrc */,
 				8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */,
-				8AFDC58B26DC923900BE2D76 /* ContentView.swift */,
 				8AFDC58C26DC924200BE2D76 /* Assets.xcassets */,
 				8AFDC5A626DC949700BE2D76 /* Model */,
 				8AFDC64A26DE9F5900BE2D76 /* Concepts */,
@@ -399,7 +395,6 @@
 				8AFDC5D826DE95D900BE2D76 /* ArtPeriod.swift in Sources */,
 				8AFDC5F426DE96A500BE2D76 /* CDSideMenuConfiguration.swift in Sources */,
 				8AFDC5C526DC99EE00BE2D76 /* SearchView.swift in Sources */,
-				8AFDC59A26DC924200BE2D76 /* ContentView.swift in Sources */,
 				8AFDC5F226DE96A500BE2D76 /* CDSideMenuNotification.swift in Sources */,
 				8AFDC60026DE96A600BE2D76 /* CDSideMenuButton.swift in Sources */,
 				8AFDC5AD26DC962C00BE2D76 /* Artwork.swift in Sources */,
@@ -446,7 +441,6 @@
 				8AFDC5D926DE95D900BE2D76 /* ArtPeriod.swift in Sources */,
 				8AFDC5F526DE96A500BE2D76 /* CDSideMenuConfiguration.swift in Sources */,
 				8AFDC5C626DC99EE00BE2D76 /* SearchView.swift in Sources */,
-				8AFDC59B26DC924200BE2D76 /* ContentView.swift in Sources */,
 				8AFDC5F326DE96A500BE2D76 /* CDSideMenuNotification.swift in Sources */,
 				8AFDC60126DE96A600BE2D76 /* CDSideMenuButton.swift in Sources */,
 				8AFDC5AE26DC962C00BE2D76 /* Artwork.swift in Sources */,
