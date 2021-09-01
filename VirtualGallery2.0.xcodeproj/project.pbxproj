@@ -88,6 +88,8 @@
 		8AFDC66026DE9F5D00BE2D76 /* CreativeProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC64C26DE9F5A00BE2D76 /* CreativeProcess.swift */; };
 		8AFDC66126DE9F5D00BE2D76 /* PrinciplesOfDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC65126DE9F5D00BE2D76 /* PrinciplesOfDesign.swift */; };
 		8AFDC66226DE9F5D00BE2D76 /* PrinciplesOfDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC65126DE9F5D00BE2D76 /* PrinciplesOfDesign.swift */; };
+		8AFDC66426DFE66200BE2D76 /* LCSArtCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */; };
+		8AFDC66526DFE66200BE2D76 /* LCSArtCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,7 @@
 		8AFDC65026DE9F5C00BE2D76 /* PostModernPrinciples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModernPrinciples.swift; sourceTree = "<group>"; };
 		8AFDC65126DE9F5D00BE2D76 /* PrinciplesOfDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinciplesOfDesign.swift; sourceTree = "<group>"; };
 		8AFDC65226DE9F5D00BE2D76 /* PurposeOfArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeOfArt.swift; sourceTree = "<group>"; };
+		8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCSArtCommunity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,7 @@
 				8AFDC62726DE9C1900BE2D76 /* Favourites.swift */,
 				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */,
 				8AFDC62D26DE9E1300BE2D76 /* Placeholder.swift */,
+				8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +406,7 @@
 				8AFDC60626DE96A600BE2D76 /* CDSideMenuView.swift in Sources */,
 				8AFDC61C26DE99BB00BE2D76 /* SearchBarView.swift in Sources */,
 				8AFDC65626DE9F5D00BE2D76 /* Surrealism.swift in Sources */,
+				8AFDC66426DFE66200BE2D76 /* LCSArtCommunity.swift in Sources */,
 				8AFDC5CB26DC9A4A00BE2D76 /* ArtHistoryView.swift in Sources */,
 				8AFDC5D526DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */,
 				8AFDC65A26DE9F5D00BE2D76 /* PostModernPrinciples.swift in Sources */,
@@ -448,6 +453,7 @@
 				8AFDC60726DE96A600BE2D76 /* CDSideMenuView.swift in Sources */,
 				8AFDC61D26DE99BB00BE2D76 /* SearchBarView.swift in Sources */,
 				8AFDC65526DE9F5D00BE2D76 /* Surrealism.swift in Sources */,
+				8AFDC66526DFE66200BE2D76 /* LCSArtCommunity.swift in Sources */,
 				8AFDC5CC26DC9A4A00BE2D76 /* ArtHistoryView.swift in Sources */,
 				8AFDC5D626DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */,
 				8AFDC65926DE9F5D00BE2D76 /* PostModernPrinciples.swift in Sources */,
