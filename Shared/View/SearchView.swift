@@ -12,7 +12,7 @@ struct SearchView: View {
     @State var searchText: String
     @Binding var showing: Bool
     @EnvironmentObject var artworks: ArtworkStore
-    
+    @State var shouldAnimate = true
     
     var body: some View {
         NavigationView{
@@ -36,7 +36,7 @@ struct SearchView: View {
                                                         .cornerRadius(15)
                                                     
                                                 } placeholder: {
-                                                    Placeholder()
+                                                    Placeholder(shouldAnimate: $shouldAnimate)
                                                 }
                                                 
                                             } else {
@@ -81,7 +81,7 @@ struct SearchView: View {
                                                         .cornerRadius(15)
                                                     
                                                 } placeholder: {
-                                                    Placeholder()
+                                                    Placeholder(shouldAnimate: $shouldAnimate)
                                                 }
                                                 
                                             } else {

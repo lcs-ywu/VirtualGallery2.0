@@ -9,7 +9,7 @@ import SwiftUI
 
 class Artwork: Identifiable, Codable, Comparable {
     
-    var id = UUID()
+    let id = UUID()
     var name: String
     var artist : String
     var yearCreated : Int
@@ -57,11 +57,16 @@ class Artwork: Identifiable, Codable, Comparable {
 
 class ArtworkStore: ObservableObject {
     
-    
-    @Published var artworks: [Artwork]
-    @Published var artworksOnDisplay: [Artwork]
-    // Favourite Artworks
+    @Published private(set) var artworks: [Artwork]
+    @Published private(set) var artworksOnDisplay: [Artwork]
     @Published private(set) var favourites: [Artwork]
+    
+   
+    
+    
+    
+    
+    
     
     static let storedFileName = "FavouritesSaved"
     
@@ -80,20 +85,25 @@ class ArtworkStore: ObservableObject {
             
             // Decode the data into Swift native data structures
             self.favourites = try JSONDecoder().decode([Artwork].self, from: data)
+            
+    
         } catch {
             #if DEBUG
             print(error.localizedDescription)
-            print("Could not load data from file, initializing favourites with empty list.")
+            print("Could not load data from file, initializing all artworks with the original list.")
             #endif
-
             self.favourites = []
+            
         }
         
         
         
-        // Initialize the other two properties
         self.artworks = allArtworks
+        
+        // Initialize the other two properties
         self.artworksOnDisplay = allArtworksOnDisplay
+        
+       
         
     }
     
@@ -109,9 +119,15 @@ class ArtworkStore: ObservableObject {
         save()
     }
     
-    // Encapsulate changes to the people array
-    func addToFavourites(_ artwork: Artwork) {
+    // Add to favourites list
+    func add(_ artwork: Artwork) {
         favourites.append(artwork)
+        save()
+    }
+    
+    // Maybe add do catch?
+    func remove(_ artwork: Artwork) {
+        favourites.remove(at: favourites.firstIndex(of: artwork)!)
         save()
     }
     
@@ -153,3 +169,13 @@ class ArtworkStore: ObservableObject {
 }
 
 
+func getFavouriteArtworks(listOfAllArtworks: [Artwork]) -> [Artwork] {
+    var temp: [Artwork] = []
+    for artwork in listOfAllArtworks {
+        if artwork.isFavourite {
+            temp.append(artwork)
+        }
+    }
+    
+    return temp
+}

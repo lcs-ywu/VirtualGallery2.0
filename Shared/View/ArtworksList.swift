@@ -17,7 +17,7 @@ struct ArtworksList: View {
     
     @State private var showingSearchingView: Bool = false
     
-   
+    @State private var shouldAnimate: Bool = true
     
     init() {
         // Able to change navigation title color
@@ -58,7 +58,7 @@ struct ArtworksList: View {
                                     .cornerRadius(30)
                                 
                             } placeholder: {
-                                Placeholder()
+                                Placeholder(shouldAnimate: $shouldAnimate)
                             }
                             
                         } else {
@@ -182,7 +182,7 @@ struct ArtworksList_Previews: PreviewProvider {
 struct ArtConceptEntry<Content: View>: View {
     var destinationView: Content
     var title: String
-    
+    @State private var shouldAnimate = true
     init(destinationView: Content,  title: String) {
         self.destinationView = destinationView
         self.title = title
@@ -204,7 +204,7 @@ struct ArtConceptEntry<Content: View>: View {
                                 .cornerRadius(15)
                             
                         } placeholder: {
-                            Placeholder()
+                            Placeholder(shouldAnimate: $shouldAnimate)
                         }
                         
                     } else {
