@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Contributors: View {
+    @State private var shouldAnimate = true
+    
     var body: some View {
         ScrollView {
             HStack {
@@ -28,7 +30,7 @@ struct Contributors: View {
                                 .scaledToFit()
                             
                         } placeholder: {
-                            Placeholder()
+                            Placeholder(shouldAnimate: $shouldAnimate)
                         }
                         AsyncImage(url: URL(string: urlDictionary["Sihan Chen"] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")){
                             image in
@@ -38,7 +40,7 @@ struct Contributors: View {
                                 .scaledToFit()
                             
                         } placeholder: {
-                            Placeholder()
+                            Placeholder(shouldAnimate: $shouldAnimate)
                         }
                         
                     } else {

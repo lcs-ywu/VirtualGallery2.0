@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1903877426E022DF00845B4E /* ArtHistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */; };
+		1903877526E022DF00845B4E /* ArtHistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */; };
+		1903877726E024EF00845B4E /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903877626E024EF00845B4E /* ArtistDetailView.swift */; };
+		1903877826E024EF00845B4E /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903877626E024EF00845B4E /* ArtistDetailView.swift */; };
 		19E85F5B26DEA24A0045C05D /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 19E85F5A26DEA24A0045C05D /* ACarousel */; };
 		8AFDC59826DC924200BE2D76 /* VirtualGallery2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */; };
 		8AFDC59926DC924200BE2D76 /* VirtualGallery2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */; };
@@ -91,6 +95,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHistoryDetailView.swift; sourceTree = "<group>"; };
+		1903877626E024EF00845B4E /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
 		8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualGallery2_0App.swift; sourceTree = "<group>"; };
 		8AFDC58C26DC924200BE2D76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AFDC59126DC924200BE2D76 /* VirtualGallery2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualGallery2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +208,9 @@
 				8AFDC60B26DE973000BE2D76 /* MyContentView.swift */,
 				8AFDC60E26DE984700BE2D76 /* ArtworksList.swift */,
 				8AFDC61226DE98F200BE2D76 /* ArtistsList.swift */,
+				1903877626E024EF00845B4E /* ArtistDetailView.swift */,
 				8AFDC5CA26DC9A4A00BE2D76 /* ArtHistoryView.swift */,
+				1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */,
 				8AFDC5C426DC99EE00BE2D76 /* SearchView.swift */,
 				8AFDC61B26DE99BB00BE2D76 /* SearchBarView.swift */,
 				8AFDC62126DE9BE700BE2D76 /* WorldMap.swift */,
@@ -408,11 +416,13 @@
 				8AFDC65A26DE9F5D00BE2D76 /* PostModernPrinciples.swift in Sources */,
 				8AFDC60F26DE984700BE2D76 /* ArtworksList.swift in Sources */,
 				8AFDC62E26DE9E1300BE2D76 /* Placeholder.swift in Sources */,
+				1903877426E022DF00845B4E /* ArtHistoryDetailView.swift in Sources */,
 				8AFDC5B626DC96E700BE2D76 /* Artist.swift in Sources */,
 				8AFDC66226DE9F5D00BE2D76 /* PrinciplesOfDesign.swift in Sources */,
 				8AFDC60826DE96A600BE2D76 /* CDSideMenuMainView.swift in Sources */,
 				8AFDC60C26DE973000BE2D76 /* MyContentView.swift in Sources */,
 				8AFDC60226DE96A600BE2D76 /* CDSideMenuAccountView.swift in Sources */,
+				1903877726E024EF00845B4E /* ArtistDetailView.swift in Sources */,
 				8AFDC5EE26DE96A500BE2D76 /* CDSideMenuViewModifiers.swift in Sources */,
 				8AFDC62826DE9C1900BE2D76 /* Favourites.swift in Sources */,
 				8AFDC62226DE9BE700BE2D76 /* WorldMap.swift in Sources */,
@@ -454,11 +464,13 @@
 				8AFDC65926DE9F5D00BE2D76 /* PostModernPrinciples.swift in Sources */,
 				8AFDC61026DE984700BE2D76 /* ArtworksList.swift in Sources */,
 				8AFDC62F26DE9E1300BE2D76 /* Placeholder.swift in Sources */,
+				1903877526E022DF00845B4E /* ArtHistoryDetailView.swift in Sources */,
 				8AFDC5B726DC96E700BE2D76 /* Artist.swift in Sources */,
 				8AFDC66126DE9F5D00BE2D76 /* PrinciplesOfDesign.swift in Sources */,
 				8AFDC60926DE96A600BE2D76 /* CDSideMenuMainView.swift in Sources */,
 				8AFDC60D26DE973000BE2D76 /* MyContentView.swift in Sources */,
 				8AFDC60326DE96A600BE2D76 /* CDSideMenuAccountView.swift in Sources */,
+				1903877826E024EF00845B4E /* ArtistDetailView.swift in Sources */,
 				8AFDC5EF26DE96A500BE2D76 /* CDSideMenuViewModifiers.swift in Sources */,
 				8AFDC62926DE9C1900BE2D76 /* Favourites.swift in Sources */,
 				8AFDC62326DE9BE700BE2D76 /* WorldMap.swift in Sources */,

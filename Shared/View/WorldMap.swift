@@ -10,8 +10,9 @@ import SwiftUI
 
 struct WorldMap: View {
     
-    let store = ArtworkStore()
-    
+    @EnvironmentObject var store: ArtworkStore
+   
+    @State private var shouldAnimate = true
     //Centre on LCS, wide enough to show most of eastern North America
     @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 44.43922, longitude: -78.26571), span: MKCoordinateSpan(latitudeDelta: 40, longitudeDelta: 40))
     
@@ -26,8 +27,8 @@ struct WorldMap: View {
                 MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: artwork.latitude, longitude: artwork.longitude)) {
                     
                     // Extension: Use latitude and longitude of 0 top represent onDisplay == false
-                    if artwork.onDisplay == true && artwork.latitude != 44.43922 && artwork.longitude != -78.26571{
-                        NavigationLink(destination: ArtworkDetail(artwork: artwork)) //, CommentStore: testCommentStore
+                    if artwork.onDisplay == true && artwork.latitude != 44.43922 && artwork.longitude != -78.26571 {
+                        NavigationLink(destination: ArtworkDetail(artwork: artwork))
                         {
                             if #available(iOS 15.0, *) {
     
@@ -42,17 +43,17 @@ struct WorldMap: View {
         //                                .shadow(radius:3)
                                     
                                 } placeholder: {
-                                    Placeholder()
-                                }
+                                    Placeholder(shouldAnimate: $shouldAnimate)
+                                
+                            }
                                 
                             } else {
                                 // Fallback on earlier versions
                                 Text("Image not supported with ios 14 or less")
                             }
-                                
                         }
-                    } else if artwork.onDisplay == true && artwork.latitude == 44.43922 && artwork.longitude == -78.26571 {
-                        NavigationLink(destination: LCSArtCommunity()) {
+                        } else if artwork.onDisplay == true && artwork.latitude == 44.43922 && artwork.longitude == -78.26571 {
+                        NavigationLink(destination: LCSArtCommunityView()) {
                       
                             if #available(iOS 15.0, *) {
     
@@ -67,7 +68,7 @@ struct WorldMap: View {
         //                                .shadow(radius:3)
                                     
                                 } placeholder: {
-                                    Placeholder()
+                                    Placeholder(shouldAnimate: $shouldAnimate)
                                 }
                                 
                             } else {
@@ -81,10 +82,10 @@ struct WorldMap: View {
                     
                 }
             }
-            .edgesIgnoringSafeArea(.all)
+            
+        }.edgesIgnoringSafeArea(.all)
             //How to make navgation title white?
             .navigationTitle("Map".uppercased())
-        }
         
     }
 }
@@ -98,4 +99,5 @@ struct WorldMap_Previews: PreviewProvider {
         
     }
 }
+
 

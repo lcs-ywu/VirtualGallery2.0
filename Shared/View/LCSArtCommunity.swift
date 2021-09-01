@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct LCSArtCommunityView: View {
-    let store = ArtworkStore()
+    @EnvironmentObject var store: ArtworkStore
+    
+    @State private var shouldAnimate = true
+    
     var body: some View {
         ScrollView{
             VStack {
@@ -43,7 +46,7 @@ struct LCSArtCommunityView: View {
         //                                .shadow(radius:3)
                                     
                                 } placeholder: {
-                                    Placeholder()
+                                    Placeholder(shouldAnimate: $shouldAnimate)
                                 }
                                 
                             } else {

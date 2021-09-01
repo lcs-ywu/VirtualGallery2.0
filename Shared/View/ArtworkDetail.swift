@@ -174,11 +174,22 @@ struct ArtworkDetail: View {
                 
             }
         }
-        
+        .onAppear {
+            if store.checkIfArtworkIsFavourite(artwork) == true {
+                if !artwork.isFavourite {
+                    store.toggle(artwork)
+                }
+            } else {
+                if artwork.isFavourite {
+                    store.toggle(artwork)
+                }
+            }
+        }
         
         
     }
 }
+
 
 //struct ArtworkDetail_Previews: PreviewProvider {
 //    static var previews: some View {
