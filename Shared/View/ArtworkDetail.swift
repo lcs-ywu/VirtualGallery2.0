@@ -16,7 +16,7 @@ struct ArtworkDetail: View {
     @State private var showingAddComment = false
     
     // For the spinning wheel on top of the view when the image is loading
-    @State private var shouldAnimate = false
+    @State private var shouldAnimate = true
     
     // Give a wrong url to trigger the code after
     @State private var validURL = URL(string: "https://www.russellgordon.ca/vg/Ocean%20Bliss.imageset/Ocean%20Bliss.jpg")
@@ -46,8 +46,8 @@ struct ArtworkDetail: View {
                         .scaledToFit()
                     
                 } placeholder: {
-                    ActivityIndicator(shouldAnimate: $shouldAnimate).frame(width: 200, height: 60, alignment: .center)
-                    Placeholder()
+                    
+                    Placeholder(shouldAnimate: $shouldAnimate)
                 }
                 
             } else {
@@ -70,8 +70,16 @@ struct ArtworkDetail: View {
         HStack {
             Spacer()
             
-            Image(systemName: artwork.isFavourite ?  "star" : "star.fill").onTapGesture {
+            
+            Image(systemName: artwork.isFavourite ?  "star.fill" : "star").onTapGesture {
                 store.toggle(artwork)
+                
+                if artwork.isFavourite {
+                    store.add(artwork)
+                } else {
+                    store.remove(artwork)
+                }
+               
             }
                 
         }

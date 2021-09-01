@@ -7,6 +7,27 @@
 
 import SwiftUI
 
+// Placeholder spinning sign
+struct ActivityIndicator: UIViewRepresentable {
+    
+    @Binding var shouldAnimate: Bool
+    //
+    func makeUIView(context: Context) -> UIActivityIndicatorView {
+        // Create UIActivityIndicatorView
+        return UIActivityIndicatorView()
+    }
+    
+    func updateUIView(_ uiView: UIActivityIndicatorView,
+                      context: Context) {
+        // Start and stop UIActivityIndicatorView animation
+        if self.shouldAnimate {
+            uiView.startAnimating()
+        } else {
+            uiView.stopAnimating()
+        }
+    }
+}
+
 // Helper Function for JSON Encoding/Decoding
 func getDocumentsDirectory() -> URL {
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
