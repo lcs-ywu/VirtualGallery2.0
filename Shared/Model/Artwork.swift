@@ -52,6 +52,8 @@ class Artwork: Identifiable, Codable, Comparable {
     static func == (lhs: Artwork, rhs: Artwork) -> Bool {
         lhs.name == rhs.name
     }
+    
+    
 }
 
 
@@ -163,6 +165,16 @@ class ArtworkStore: ObservableObject {
             #endif
         }
         
+    }
+    
+    // Used to check if artwork is already stored permenantly
+    func checkIfArtworkIsFavourite(_ artwork: Artwork) -> Bool {
+        for item in self.favourites {
+            if artwork == item {
+                return true
+            }
+        }
+        return false
     }
     
     

@@ -25,8 +25,8 @@ struct ArtworkDetail: View {
     // Used for the sharing button on the top right
     func shareArtwork() {
         // Can this be store to somewhere to reduce running time?
-        let url = findValidURL(name: artwork.name)
-        let avc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        let url = URL(string: urlDictionary[artwork.name]!)
+        let avc = UIActivityViewController(activityItems: [url ?? URL(string: "https://www.russellgordon.ca")!], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController!.present(avc, animated: true, completion: nil)
     }
     
@@ -174,11 +174,22 @@ struct ArtworkDetail: View {
                 
             }
         }
-        
+        .onAppear {
+            if store.checkIfArtworkIsFavourite(artwork) == true {
+                if !artwork.isFavourite {
+                    store.toggle(artwork)
+                }
+            } else {
+                if artwork.isFavourite {
+                    store.toggle(artwork)
+                }
+            }
+        }
         
         
     }
 }
+
 
 //struct ArtworkDetail_Previews: PreviewProvider {
 //    static var previews: some View {
