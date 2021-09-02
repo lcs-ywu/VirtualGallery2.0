@@ -27,16 +27,16 @@ Art from this period relied on the use of natural pigments and stone carvings to
 }
 
 
-struct Periods {
-    var periods: [Period] = []
-    init() {
-        
-        self.periods = allArtPeriods
-        
-    }
-}
+//struct Periods {
+//    var periods: [Period] = []
+//    init() {
+//
+//        self.periods = allArtPeriods
+//
+//    }
+//}
 
-let testPeriods = Periods()
+//let testPeriods = Periods()
 
 func getArtist(named name: String) -> Artist {
     if let artist = allArtists.first(where: {$0.name == name}) {

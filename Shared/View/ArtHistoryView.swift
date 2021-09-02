@@ -12,7 +12,7 @@ struct ArtHistoryView: View {
     @State private var isNavigationBarHidden = false
     @State private var shouldAnimate = true
     // Move this outside of body?
-    let store = Periods()
+//    let store = Periods()
     
     private func artHistoryText(name: String, color: Color) -> some View {
         return  VStack {
@@ -31,7 +31,7 @@ struct ArtHistoryView: View {
             }
             
             
-            ForEach(store.periods) { period in
+            ForEach(allArtPeriods) { period in
                 
                 NavigationLink(destination: ArtHistoryDetailView(period: period)){
                     ZStack {
