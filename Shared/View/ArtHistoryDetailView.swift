@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ArtHistoryDetailView: View {
+    
     @State private var isNavigationBarHidden = false
     let period : Period
     @EnvironmentObject var artists: ArtistsStore
+    @State private var shouldAnimate = true
     
     var body: some View {
         ScrollView {
             
-            Image(period.name).resizable().scaledToFit()
+            if #available(iOS 15.0, *) {
+                AsyncImage(url: URL(string: urlDictionary[period.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+                    image in
+                    
+                    image
+                        .resizable()
+                        .scaledToFit()
+                       
+                    
+                } placeholder: {
+                    Placeholder(shouldAnimate: $shouldAnimate)
+                }
+                
+            } else {
+                // Fallback on earlier versions
+                Text("Image not supported with ios 14 or less")
+            }
+            
             Text(period.name) .font(.system(.title, design: .serif)).bold()
             Text(period.time) .font(.system(.title2, design: .serif))
             VStack {
@@ -48,7 +67,25 @@ struct ArtHistoryDetailView: View {
                     NavigationLink(destination: ArtistDetailView(artist: artist)){
                         VStack {
                             ZStack {
-                                Image(artist.name).resizable().scaledToFit()
+                                if #available(iOS 15.0, *) {
+                                    AsyncImage(url: URL(string: urlDictionary[artist.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+                                        image in
+                                        
+                                        image
+                                            .resizable()
+                                            .scaledToFit()
+                                            
+                                        
+                                    } placeholder: {
+                                        Placeholder(shouldAnimate: $shouldAnimate)
+                                    }
+                                    
+                                } else {
+                                    // Fallback on earlier versions
+                                    Text("Image not supported with ios 14 or less")
+                                }
+                                
+                                
                                 VStack {
                                     Spacer()
                                     Text("Click to see more")

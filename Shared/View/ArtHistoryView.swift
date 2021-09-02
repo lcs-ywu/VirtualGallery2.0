@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct ArtHistoryView: View {
+    
     @State private var isNavigationBarHidden = false
+    @State private var shouldAnimate = true
+    // Move this outside of body?
+    let store = Periods()
+    
+    private func artHistoryText(name: String, color: Color) -> some View {
+        return  VStack {
+            Text(name).bold().font(.system(.title2, design: .serif))
+            Text(name).bold().font(.system(.title3, design: .serif))
+            
+        }.padding(.leading).foregroundColor(color)
+    }
     var body: some View {
         
-        let store = Periods()
-        
+                
         ScrollView{
             Group {
                 Image("Art History").resizable().scaledToFit()
@@ -26,19 +37,30 @@ struct ArtHistoryView: View {
                     ZStack {
                         Image("Frame").resizable().scaledToFit().padding(.all)
                         // Need to make the frame fixed size
-                        Image(period.name).resizable().clipShape(Circle()).frame(width: 300, height: 300, alignment: .center)
-                        if period.name != "Baroque" && period.name != "Abstract Expressionism" {
-                            VStack {
-                                Text(period.name).bold().font(.system(.title2, design: .serif))
-                                Text(period.time).bold().font(.system(.title3, design: .serif))
+                        // Can't replace this with async as it causes typecheck error
+                        if #available(iOS 15.0, *) {
+                            AsyncImage(url: URL(string: urlDictionary[period.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+                                image in
                                 
-                            }.padding(.leading).foregroundColor(.black)
+                                image
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 300, height: 300, alignment: .center)
+                                   
+                                
+                            } placeholder: {
+                                Placeholder(shouldAnimate: $shouldAnimate)
+                            }
+                            
                         } else {
-                            VStack {
-                                Text(period.name).bold().font(.system(.title2, design: .serif))
-                                Text(period.time).bold().font(.system(.title3, design: .serif))
-                                
-                            }.padding(.leading).foregroundColor(.white)
+                            // Fallback on earlier versions
+                            Text("Image not supported with ios 14 or less")
+                        }
+                        
+                        if period.name != "Baroque" && period.name != "Abstract Expressionism" {
+                            artHistoryText(name:period.name, color: .black)
+                        } else {
+                            artHistoryText(name:period.name, color: .white)
                         }
                         
                     }
@@ -46,20 +68,26 @@ struct ArtHistoryView: View {
             }
             
             
-            HStack {
-                Text("""
-                Notes: This introduction to art history only contains mostly periods in Western art history, the significance of other cultures will be added soon.
-                """).font(.system(.body, design: .serif)).padding(.all)
-                Spacer()
-            }.padding(.leading, 2)
+            
+            Group {
+                HStack {
+                    Text("""
+                    Notes: This introduction to art history only contains mostly periods in Western art history, the significance of other cultures will be added soon.
+                    """).font(.system(.body, design: .serif)).padding(.all)
+                    Spacer()
+                }.padding(.leading, 2)
+                
+                HStack {
+                    Text("""
+                    Reference from: https://www.invaluable.com/blog/art-history-timeline/
+                    """).font(.system(.body, design: .serif)).padding(.all)
+                    Spacer()
+                }.padding(.leading, 2)
+            }
+           
             
             
-            HStack {
-                Text("""
-                Reference from: https://www.invaluable.com/blog/art-history-timeline/
-                """).font(.system(.body, design: .serif)).padding(.all)
-                Spacer()
-            }.padding(.leading, 2)
+           
             
             
         }.ignoresSafeArea()

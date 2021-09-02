@@ -12,11 +12,30 @@ struct ArtistDetailView: View {
     @State private var isNavigationBarHidden = false
     let artist: Artist
     @EnvironmentObject var artworkStore: ArtworkStore
-   
+    @State private var shouldAnimate = true
+    
     var body: some View {
         ScrollView {
             
-            Image(artist.name).resizable().scaledToFit()
+            if #available(iOS 15.0, *) {
+                AsyncImage(url: URL(string: urlDictionary[artist.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+                    image in
+                    
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        
+                    
+                } placeholder: {
+                    Placeholder(shouldAnimate: $shouldAnimate)
+                }
+                
+            } else {
+                // Fallback on earlier versions
+                Text("Image not supported with ios 14 or less")
+            }
+            
+            
             
             HStack {
                 Spacer()
@@ -82,11 +101,25 @@ struct ArtistDetailView: View {
                             VStack {
                                 HStack{
                                     
-                                    Image(artwork.name)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 44, height:44)
-                                        .cornerRadius(15)
+                                    if #available(iOS 15.0, *) {
+                                        AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+                                            image in
+                                            
+                                            image
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 44, height:44)
+                                                .cornerRadius(15)
+                                            
+                                        } placeholder: {
+                                            Placeholder(shouldAnimate: $shouldAnimate)
+                                        }
+                                        
+                                    } else {
+                                        // Fallback on earlier versions
+                                        Text("Image not supported with ios 14 or less")
+                                    }
+                                   
                                     
                                     VStack(alignment: .leading) {
                                         Text(artwork.name)
