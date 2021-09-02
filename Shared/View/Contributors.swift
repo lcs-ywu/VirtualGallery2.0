@@ -21,8 +21,10 @@ struct Contributors: View {
             VStack {
                 HStack {
                     
+
                     Image("James Wu").resizable().scaledToFit()
                     Image("Sihan Chen").resizable().scaledToFit()
+
                     
                 }
                 HStack {

@@ -11,6 +11,8 @@
 		1903877526E022DF00845B4E /* ArtHistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */; };
 		1903877726E024EF00845B4E /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903877626E024EF00845B4E /* ArtistDetailView.swift */; };
 		1903877826E024EF00845B4E /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903877626E024EF00845B4E /* ArtistDetailView.swift */; };
+		199052B726E154290033DE7A /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199052B626E154290033DE7A /* Museum.swift */; };
+		199052B826E154290033DE7A /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199052B626E154290033DE7A /* Museum.swift */; };
 		19E85F5B26DEA24A0045C05D /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 19E85F5A26DEA24A0045C05D /* ACarousel */; };
 		8AFDC59826DC924200BE2D76 /* VirtualGallery2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */; };
 		8AFDC59926DC924200BE2D76 /* VirtualGallery2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */; };
@@ -97,6 +99,7 @@
 /* Begin PBXFileReference section */
 		1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHistoryDetailView.swift; sourceTree = "<group>"; };
 		1903877626E024EF00845B4E /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
+		199052B626E154290033DE7A /* Museum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Museum.swift; sourceTree = "<group>"; };
 		8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualGallery2_0App.swift; sourceTree = "<group>"; };
 		8AFDC58C26DC924200BE2D76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AFDC59126DC924200BE2D76 /* VirtualGallery2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualGallery2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +200,7 @@
 				8AFDC5AC26DC962C00BE2D76 /* Artwork.swift */,
 				8AFDC5B526DC96E700BE2D76 /* Artist.swift */,
 				8AFDC5D726DE95D900BE2D76 /* ArtPeriod.swift */,
+				199052B626E154290033DE7A /* Museum.swift */,
 				8AFDC5D426DE91D500BE2D76 /* SharedFunctionAndConstants.swift */,
 			);
 			path = Model;
@@ -207,10 +211,10 @@
 			children = (
 				8AFDC60B26DE973000BE2D76 /* MyContentView.swift */,
 				8AFDC60E26DE984700BE2D76 /* ArtworksList.swift */,
-				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */,
+				8AFDC5CA26DC9A4A00BE2D76 /* ArtHistoryView.swift */,
+				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */
 				8AFDC61226DE98F200BE2D76 /* ArtistsList.swift */,
 				1903877626E024EF00845B4E /* ArtistDetailView.swift */,
-				8AFDC5CA26DC9A4A00BE2D76 /* ArtHistoryView.swift */,
 				1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */,
 				8AFDC5C426DC99EE00BE2D76 /* SearchView.swift */,
 				8AFDC61B26DE99BB00BE2D76 /* SearchBarView.swift */,
@@ -407,6 +411,7 @@
 				8AFDC60026DE96A600BE2D76 /* CDSideMenuButton.swift in Sources */,
 				8AFDC5AD26DC962C00BE2D76 /* Artwork.swift in Sources */,
 				8AFDC5F626DE96A500BE2D76 /* CDSideMenuItem.swift in Sources */,
+				199052B726E154290033DE7A /* Museum.swift in Sources */,
 				8AFDC60626DE96A600BE2D76 /* CDSideMenuView.swift in Sources */,
 				8AFDC61C26DE99BB00BE2D76 /* SearchBarView.swift in Sources */,
 				8AFDC65626DE9F5D00BE2D76 /* Surrealism.swift in Sources */,
@@ -455,6 +460,7 @@
 				8AFDC60126DE96A600BE2D76 /* CDSideMenuButton.swift in Sources */,
 				8AFDC5AE26DC962C00BE2D76 /* Artwork.swift in Sources */,
 				8AFDC5F726DE96A500BE2D76 /* CDSideMenuItem.swift in Sources */,
+				199052B826E154290033DE7A /* Museum.swift in Sources */,
 				8AFDC60726DE96A600BE2D76 /* CDSideMenuView.swift in Sources */,
 				8AFDC61D26DE99BB00BE2D76 /* SearchBarView.swift in Sources */,
 				8AFDC65526DE9F5D00BE2D76 /* Surrealism.swift in Sources */,
