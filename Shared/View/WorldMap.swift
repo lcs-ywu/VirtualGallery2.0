@@ -53,6 +53,7 @@ struct WorldMap: View {
 //                            }
 //                        }
 //                        } else
+                    
                     if artwork.onDisplay == true && artwork.latitude == 44.43922 && artwork.longitude == -78.26571 {
                         NavigationLink(destination: LCSArtCommunityView()) {
                       

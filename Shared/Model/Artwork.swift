@@ -177,6 +177,26 @@ class ArtworkStore: ObservableObject {
         return false
     }
     
+    func getArtworkWithName(name: String) -> Artwork {
+        for artwork in allArtworks {
+            if name == artwork.name {
+                return artwork
+            }
+        }
+        
+        
+        return Artwork(name: "Something Is Wrong Here", artist: "Error", yearCreated: 9999, description: "", more: "", onDisplay: false, museum: "", latitude: 0, longitude: 0, medium: "", LCSart: false)
+    }
+    
+    func findMuseum(_ artwork: Artwork) -> Museum? {
+        for museum in allMuseums {
+            if museum.latitude == artwork.latitude && museum.longitude == artwork.longitude {
+                return museum
+            }
+        }
+        return nil
+    }
+    
     
 }
 
