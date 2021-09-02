@@ -212,7 +212,7 @@
 				8AFDC60B26DE973000BE2D76 /* MyContentView.swift */,
 				8AFDC60E26DE984700BE2D76 /* ArtworksList.swift */,
 				8AFDC5CA26DC9A4A00BE2D76 /* ArtHistoryView.swift */,
-				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */
+				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */,
 				8AFDC61226DE98F200BE2D76 /* ArtistsList.swift */,
 				1903877626E024EF00845B4E /* ArtistDetailView.swift */,
 				1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */,
