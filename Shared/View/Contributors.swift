@@ -21,33 +21,10 @@ struct Contributors: View {
             VStack {
                 HStack {
                     
-                    // Change to normal picture
-                    if #available(iOS 15.0, *) {
-                        AsyncImage(url: URL(string: urlDictionary["James Wu"] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")){
-                            image in
-                            
-                            image
-                                .resizable()
-                                .scaledToFit()
-                            
-                        } placeholder: {
-                            Placeholder(shouldAnimate: $shouldAnimate)
-                        }
-                        AsyncImage(url: URL(string: urlDictionary["Sihan Chen"] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")){
-                            image in
-                            
-                            image
-                                .resizable()
-                                .scaledToFit()
-                            
-                        } placeholder: {
-                            Placeholder(shouldAnimate: $shouldAnimate)
-                        }
-                        
-                    } else {
-                        // Fallback on earlier versions
-                        Text("Image not supported with ios 14 or less")
-                    }
+
+                    Image("James Wu").resizable().scaledToFit()
+                    Image("Sihan Chen").resizable().scaledToFit()
+
                     
                 }
                 HStack {

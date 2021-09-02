@@ -24,21 +24,25 @@ struct Favourites: View {
     }
     
     var body: some View {
-        Form {
-            List {
-                Section(header: Text("Artworks").foregroundColor(.black)) {
+            ScrollView(.vertical) {
+                HStack{
+                    Text("Favourites").bold().foregroundColor(.black).font(.system(.largeTitle, design: .serif)).padding(.horizontal).multilineTextAlignment(.leading)
+                    Spacer()
+                }
+
+                VStack(spacing: 20) {
                     ForEach(artworks.favourites) { artwork in
                         NavigationLink(destination: ArtworkDetail(artwork: artwork)) {
-                            HStack{
+                            VStack{
                                 if #available(iOS 15.0, *) {
                                     AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
                                         image in
                                         
                                         image
                                             .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 44, height:44)
-                                            .cornerRadius(15)
+                                            .scaledToFit().padding()
+                                        //                                        .frame(width: 44, height:44)
+//                                            .cornerRadius(80)
                                         
                                     } placeholder: {
                                         Placeholder(shouldAnimate: $shouldAnimate)
@@ -50,17 +54,52 @@ struct Favourites: View {
                                 }
                                 
                                 
-                                Text(artwork.name)
+                                Text(artwork.name).foregroundColor(.black).font(.system(.title2, design: .serif))
                                 Spacer()
-                            }
                         }
                     }
                 }
             }
         }
-    
     }
 }
+//        Form {
+//            List {
+//                Section(header: Text("Artworks").foregroundColor(.black)) {
+//                    ForEach(artworks.favourites) { artwork in
+//                        NavigationLink(destination: ArtworkDetail(artwork: artwork)) {
+//                            HStack{
+//                                if #available(iOS 15.0, *) {
+//                                    AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+//                                        image in
+//
+//                                        image
+//                                            .resizable()
+//                                            .scaledToFit()
+//                                            .frame(width: 44, height:44)
+//                                            .cornerRadius(15)
+//
+//                                    } placeholder: {
+//                                        Placeholder(shouldAnimate: $shouldAnimate)
+//                                    }
+//
+//                                } else {
+//                                    // Fallback on earlier versions
+//                                    Text("Image not supported with ios 14 or less")
+//                                }
+//
+//
+//                                Text(artwork.name)
+//                                Spacer()
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
+
 
 struct Favourites_Previews: PreviewProvider {
     static var previews: some View {

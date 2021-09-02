@@ -212,6 +212,7 @@
 				8AFDC60B26DE973000BE2D76 /* MyContentView.swift */,
 				8AFDC60E26DE984700BE2D76 /* ArtworksList.swift */,
 				8AFDC5CA26DC9A4A00BE2D76 /* ArtHistoryView.swift */,
+				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */
 				8AFDC61226DE98F200BE2D76 /* ArtistsList.swift */,
 				1903877626E024EF00845B4E /* ArtistDetailView.swift */,
 				1903877326E022DF00845B4E /* ArtHistoryDetailView.swift */,
@@ -220,7 +221,6 @@
 				8AFDC62126DE9BE700BE2D76 /* WorldMap.swift */,
 				8AFDC62426DE9BFA00BE2D76 /* Contributors.swift */,
 				8AFDC62726DE9C1900BE2D76 /* Favourites.swift */,
-				8AFDC62A26DE9C6F00BE2D76 /* ArtworkDetail.swift */,
 				8AFDC62D26DE9E1300BE2D76 /* Placeholder.swift */,
 				8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */,
 			);
