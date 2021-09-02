@@ -27,32 +27,33 @@ struct WorldMap: View {
                 MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: artwork.latitude, longitude: artwork.longitude)) {
                     
                     // Extension: Use latitude and longitude of 0 top represent onDisplay == false
-                    if artwork.onDisplay == true && artwork.latitude != 44.43922 && artwork.longitude != -78.26571 {
-                        NavigationLink(destination: ArtworkDetail(artwork: artwork))
-                        {
-                            if #available(iOS 15.0, *) {
-    
-                                AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")){
-                                    image in
-                                    
-                                    image
-                                        .resizable()
-                                        .cornerRadius(10)
-                                        .scaledToFit()
-                                        .frame(width:80, height:80)
-        //                                .shadow(radius:3)
-                                    
-                                } placeholder: {
-                                    Placeholder(shouldAnimate: $shouldAnimate)
-                                
-                            }
-                                
-                            } else {
-                                // Fallback on earlier versions
-                                Text("Image not supported with ios 14 or less")
-                            }
-                        }
-                        } else if artwork.onDisplay == true && artwork.latitude == 44.43922 && artwork.longitude == -78.26571 {
+//                    if artwork.onDisplay == true && artwork.latitude != 44.43922 && artwork.longitude != -78.26571 {
+//                        NavigationLink(destination: ArtworkDetail(artwork: artwork))
+//                        {
+//                            if #available(iOS 15.0, *) {
+//
+//                                AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")){
+//                                    image in
+//
+//                                    image
+//                                        .resizable()
+//                                        .cornerRadius(10)
+//                                        .scaledToFit()
+//                                        .frame(width:80, height:80)
+//        //                                .shadow(radius:3)
+//
+//                                } placeholder: {
+//                                    Placeholder(shouldAnimate: $shouldAnimate)
+//
+//                            }
+//
+//                            } else {
+//                                // Fallback on earlier versions
+//                                Text("Image not supported with ios 14 or less")
+//                            }
+//                        }
+//                        } else
+                    if artwork.onDisplay == true && artwork.latitude == 44.43922 && artwork.longitude == -78.26571 {
                         NavigationLink(destination: LCSArtCommunityView()) {
                       
                             if #available(iOS 15.0, *) {
