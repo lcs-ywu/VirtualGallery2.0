@@ -71,7 +71,9 @@ struct ArtworkDetail: View {
             Spacer()
             
             
-            Image(systemName: artwork.isFavourite ?  "star.fill" : "star").onTapGesture {
+            Image(systemName: artwork.isFavourite ?  "star.fill" : "star").resizable().frame(width: 25, height: 25).padding()
+                
+                .onTapGesture {
                 store.toggle(artwork)
                 
                 if artwork.isFavourite {
