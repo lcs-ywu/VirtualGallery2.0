@@ -67,36 +67,39 @@ struct ArtworkDetail: View {
     Spacer()
     
     VStack{
-        HStack {
-            Spacer()
-            
-            
-            Image(systemName: artwork.isFavourite ?  "star.fill" : "star").resizable().frame(width: 25, height: 25).padding()
-                
-                .onTapGesture {
-                store.toggle(artwork)
-                
-                if artwork.isFavourite {
-                    store.add(artwork)
-                } else {
-                    store.remove(artwork)
-                }
-               
-            }
-                
-        }
         
-        HStack{
-            
-            Spacer()
-            Text(artwork.artist)
-                .italic()
-                .font(.body)
-                .bold()
-
-            Spacer()
-            
+        ZStack {
+            HStack {
+                Spacer()
+                
+                
+                Image(systemName: artwork.isFavourite ?  "star.fill" : "star").resizable().frame(width: 20, height: 20)
+                    
+                    .onTapGesture {
+                    store.toggle(artwork)
+                    
+                    if artwork.isFavourite {
+                        store.add(artwork)
+                    } else {
+                        store.remove(artwork)
+                    }
+                   
+                }
+                    
             }
+            HStack{
+                
+                Spacer()
+                Text(artwork.artist)
+                    .italic()
+                    .font(.body)
+                    .bold()
+
+                Spacer()
+                
+                }
+        }
+       
         HStack {
             Spacer()
             Text(artwork.medium).font(.body)
@@ -195,9 +198,9 @@ struct ArtworkDetail: View {
 
 //struct ArtworkDetail_Previews: PreviewProvider {
 //    static var previews: some View {
-//        NavigationView{
-//            ArtworkDetail(artwork: Artwork.example, isFavourite: true) //, CommentStore: testCommentStore
-//        }
+//
+//            ArtworkDetail(artwork: Artwork(name: "James Wu", artist: "James Wu", yearCreated: 2988, description: "", more: "", onDisplay: false, museum: "LCS Gallery", latitude: 0, longitude: 0, medium: "Oil on canvas", LCSart: true))
+//
 //    }
 //}
 // Referenced from https://stackoverflow.com/questions/57035746/how-to-scale-text-to-fit-parent-view-with-swiftui
