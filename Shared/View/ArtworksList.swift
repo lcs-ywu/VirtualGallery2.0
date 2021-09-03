@@ -66,7 +66,7 @@ struct ArtworksList: View {
                             Text("Image not supported with ios 14 or less")
                         }
                     }
-                    Text(item.name).font(.system(.title2, design: .serif))
+                    Text(item.name).font(.system(.title2, design: .serif)).multilineTextAlignment(.center)
                     Text(item.artist).font(.system(.title3, design: .serif))
                 }
             }

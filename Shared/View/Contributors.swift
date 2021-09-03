@@ -41,7 +41,7 @@ struct Contributors: View {
                 Text("""
      This a collaboration project created by James Wu and Sihan Chen, please let us how how we could do better:)
 
-     Spacial Thanks to Mr. Gordon, Ms. Morencie and every LCS artist who supported us.
+     Spacial thanks to Mr. Gordon, Ms. Morencie and every LCS artist who supported us.
      """).font(.system(.title2, design: .serif))
                     .multilineTextAlignment(.leading).padding()
                     .fixedSize(horizontal: false, vertical: true)

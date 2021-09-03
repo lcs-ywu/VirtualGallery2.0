@@ -48,7 +48,8 @@ struct ArtistsList: View {
                                         .resizable()
                                         .scaledToFill()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height: 270)
+                                    // Height was 270 but does not work for one artwork
+                                        .frame(height: 250)
                                         .cornerRadius(30)
                                     
                                 } placeholder: {
@@ -62,7 +63,7 @@ struct ArtistsList: View {
                             
                         }
                         
-                        Text(item.name).bold().italic().font(.title2)
+                        Text(item.name).bold().italic().font(.title2).multilineTextAlignment(.center)
                         Text(item.artist).font(.title2)
                         Text(item.medium).font(.title2)
                         //                    Text("Click on the picture to find out more")
@@ -104,7 +105,8 @@ struct ArtistsList: View {
                                     .resizable()
                                     .scaledToFill()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(height: 270)
+                                // See which one is better
+//                                    .frame(height: 270)
                                     .cornerRadius(30)
                                 
                             } placeholder: {
