@@ -190,7 +190,7 @@ class ArtworkStore: ObservableObject {
     
     func findMuseum(_ artwork: Artwork) -> Museum? {
         for museum in allMuseums {
-            if museum.latitude == artwork.latitude && museum.longitude == artwork.longitude {
+            if museum.name == artwork.museum {
                 return museum
             }
         }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MuseumDetailView: View {
     @EnvironmentObject var store: ArtworkStore
-    
+    @State private var shouldAnimate = true
     var museum: Museum
     
     var body: some View {
@@ -36,7 +36,26 @@ struct MuseumDetailView: View {
                 NavigationLink(destination: ArtworkDetail(artwork: store.getArtworkWithName(name: name))) {
                     
                     HStack {
-                        Image(name).resizable().cornerRadius(10).scaledToFit().frame(width: 100, height: 100)
+                        if #available(iOS 15.0, *) {
+                            AsyncImage(url: URL(string: urlDictionary[name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+                                image in
+                                
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .cornerRadius(10)
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                
+                            } placeholder: {
+                                Placeholder(shouldAnimate: $shouldAnimate)
+                            }
+                            
+                        } else {
+                            // Fallback on earlier versions
+                            Text("Image not supported with ios 14 or less")
+                        }
+                        
                         
                         VStack(alignment: .leading) {
                             Text(name)
