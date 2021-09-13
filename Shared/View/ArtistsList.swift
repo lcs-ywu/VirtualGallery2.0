@@ -34,7 +34,9 @@ struct ArtistsList: View {
                           spacing: 10,
                           headspace: 10,
                           sidesScaling: 0.7,
-                          isWrap: true, autoScroll: .active(3)) { item in
+                          isWrap: true
+//                          , autoScroll: .active(3)
+                ) { item in
                     
                     VStack {
                         
@@ -90,8 +92,9 @@ struct ArtistsList: View {
                       spacing: 10,
                       headspace: 10,
                       sidesScaling: 0.7,
-                      isWrap: true,
-                      autoScroll: .active(3)) { item in
+                      isWrap: true
+//                      ,autoScroll: .active(3)
+            ) { item in
                 
                 VStack {
                     

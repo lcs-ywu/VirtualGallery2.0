@@ -21,11 +21,12 @@ struct MuseumDetailView: View {
                 Text("Introduction")
                     .bold()
                     .font(.title)
-                    .foregroundColor(.LCSGreen)
+//                    .foregroundColor(.LCSGreen)
                 
                 Text(museum.description).font(.title2).padding().fixedSize(horizontal: false, vertical: true)
             
-                Text("Displayed Artworks").bold().font(.title).foregroundColor(.LCSGreen)
+                Text("Displayed Artworks").bold().font(.title)
+//                    .foregroundColor(.LCSGreen)
             }
           
             

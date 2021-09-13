@@ -44,8 +44,9 @@ struct ArtworksList: View {
                       spacing: 10,
                       headspace: 10,
                       sidesScaling: 0.7,
-                      isWrap: true,
-                      autoScroll: .active(4)) { item in
+                      isWrap: true
+//                      ,autoScroll: .active(4)
+            ) { item in
                 VStack {
                     NavigationLink(destination: ArtworkDetail(artwork: item)){
                         if #available(iOS 15.0, *) {
@@ -110,7 +111,8 @@ struct ArtworksList: View {
                         ArtConceptEntry(destinationView: GroupOfSeven(), title: "The Group of Seven")
                         
                         
-                    }.ignoresSafeArea(edges: .all)
+                    }
+//                    .ignoresSafeArea(edges: .all)
                     .foregroundColor(.black)
                     
                     

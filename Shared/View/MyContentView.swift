@@ -42,8 +42,8 @@ struct MyContentView: View {
                                                menuButtonSize: 28,
                                                menuSizeFactor: 1.1,
                                                menuItems: menuItems
-                                               ,
-                                               userData: CDUserData(userName: "Chris", imageUrl: "turtlerock")
+//                                               ,
+//                                               userData: CDUserData(userName: "Chris", imageUrl: "turtlerock")
             )
             
         }

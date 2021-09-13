@@ -164,8 +164,8 @@ struct ArtworkDetail: View {
         
         Text(artwork.more).padding(.horizontal)
     }
-}
-        .edgesIgnoringSafeArea(.top)
+        }.navigationBarTitle(artwork.name)
+//        .edgesIgnoringSafeArea(.top)
         // Consider smooth transition?
         .navigationBarHidden(isNavigationBarHidden)
         .onTapGesture {
