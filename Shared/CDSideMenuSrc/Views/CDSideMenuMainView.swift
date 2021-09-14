@@ -70,7 +70,7 @@ public struct CDSideMenuMainView: View {
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: (
                     /// Top left menu button
-                    CDSideMenuButton(sideMenuOpen: self.$sideMenuOpen, toggleLeftMenu: self.toggleLeftMenu)
+                    CDSideMenuButton(sideMenuOpen: self.$sideMenuOpen, toggleLeftMenu: self.toggleLeftMenu) 
                 ))
             }
         }
