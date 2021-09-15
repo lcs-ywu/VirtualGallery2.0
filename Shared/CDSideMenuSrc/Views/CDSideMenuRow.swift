@@ -19,7 +19,7 @@ struct CDSideMenuRow: View {
         Button(action: { self.didSelectRowAt(self.index) }, label: {
             HStack {
                 Image(systemName: self.configuration.menuItems[index].sfImage)
-                    .imageScale(.large)
+                    .imageScale(.large).frame(width: 10, height: 10).padding(.trailing, 10).padding(.leading, 5)
                 
                 Text(self.configuration.menuItems[index].title)
                     .fontWeight(self.selectedRow == index ? .heavy : .none)

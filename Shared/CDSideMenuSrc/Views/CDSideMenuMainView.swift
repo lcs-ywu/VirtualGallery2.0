@@ -66,11 +66,11 @@ public struct CDSideMenuMainView: View {
                 }
                 .gesture(drag)
                 .navigationBarHidden(self.configuration.navigationBarHidden)
-                .navigationBarTitle(Text(self.navigationBarTitle), displayMode: .inline)
+//                .navigationBarTitle(Text(self.navigationBarTitle), displayMode: .inline)
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: (
                     /// Top left menu button
-                    CDSideMenuButton(sideMenuOpen: self.$sideMenuOpen, toggleLeftMenu: self.toggleLeftMenu)
+                    CDSideMenuButton(sideMenuOpen: self.$sideMenuOpen, toggleLeftMenu: self.toggleLeftMenu) 
                 ))
             }
         }
