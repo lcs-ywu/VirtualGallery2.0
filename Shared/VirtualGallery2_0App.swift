@@ -17,11 +17,13 @@ struct VirtualGallery2_0App: App {
     var artistsStore = ArtistsStore()
     
     var body: some Scene {
+        
         WindowGroup {
-            
-            MyContentView()
+           MyContentView()
                 .environmentObject(artworkStore)
                 .environmentObject(artistsStore)
+            
+                
             // Problem: Clicking the middle of the two bars also alter the screen
         }
     }

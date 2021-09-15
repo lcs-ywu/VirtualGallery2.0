@@ -28,7 +28,7 @@ struct ArtworksList: View {
     
     var body: some View {
         
-        ScrollView{
+        ScrollView {
             
             //            SearchBarView(text: $searchText)
             //                .padding(.top)

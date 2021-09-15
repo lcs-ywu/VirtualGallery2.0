@@ -25,6 +25,8 @@ struct MyContentView: View {
         
         menuItems.append(CDSideMenuItem(title: "My Favourites", sfImage: "star", view: AnyView(Favourites())))
         
+        menuItems.append(CDSideMenuItem(title: "Help", sfImage: "questionmark", view: AnyView(Main())))
+        
         do { /// You must setup your left menu in a do-catch as the Configurator will let you know if there is anything wrong with your configuration
            
             /// Choice #1 : Default configuration
