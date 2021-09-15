@@ -84,7 +84,7 @@ struct WorldMap: View {
                 
             }.edgesIgnoringSafeArea(.all)
             //How to make navgation title white?
-                .navigationTitle("Museums")
+//                .navigationTitle("Museums")
             
         }
     }

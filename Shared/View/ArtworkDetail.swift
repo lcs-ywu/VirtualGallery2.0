@@ -21,6 +21,9 @@ struct ArtworkDetail: View {
     // Give a wrong url to trigger the code after
     @State private var validURL = URL(string: "https://www.russellgordon.ca/vg/Ocean%20Bliss.imageset/Ocean%20Bliss.jpg")
     
+    //Magnification scale for the gesture
+    @State var scale: CGFloat = 2.0
+    
 //    @State var isFavourite: Bool
     // Used for the sharing button on the top right
     func shareArtwork() {
@@ -44,6 +47,13 @@ struct ArtworkDetail: View {
                     image
                         .resizable()
                         .scaledToFit()
+                    
+                    //Magnification gesture not working
+                        .gesture(MagnificationGesture()
+                                    .onChanged { value in
+                                        self.scale = value.magnitude
+                                    }
+                                )
                     
                 } placeholder: {
                     
