@@ -96,6 +96,14 @@
 		8AFDC66226DE9F5D00BE2D76 /* PrinciplesOfDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC65126DE9F5D00BE2D76 /* PrinciplesOfDesign.swift */; };
 		8AFDC66426DFE66200BE2D76 /* LCSArtCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */; };
 		8AFDC66526DFE66200BE2D76 /* LCSArtCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */; };
+		9C31BE4126F16F1A00361C05 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4026F16F1A00361C05 /* Main.swift */; };
+		9C31BE4226F16F1A00361C05 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4026F16F1A00361C05 /* Main.swift */; };
+		9C31BE4426F16F3900361C05 /* OnboardingViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4326F16F3900361C05 /* OnboardingViewOne.swift */; };
+		9C31BE4526F16F3900361C05 /* OnboardingViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4326F16F3900361C05 /* OnboardingViewOne.swift */; };
+		9C31BE4726F16F4900361C05 /* OnboardingViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4626F16F4900361C05 /* OnboardingViewTwo.swift */; };
+		9C31BE4826F16F4900361C05 /* OnboardingViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4626F16F4900361C05 /* OnboardingViewTwo.swift */; };
+		9C31BE4A26F16F5900361C05 /* OnboardingViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4926F16F5900361C05 /* OnboardingViewThree.swift */; };
+		9C31BE4B26F16F5900361C05 /* OnboardingViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31BE4926F16F5900361C05 /* OnboardingViewThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +154,10 @@
 		8AFDC65126DE9F5D00BE2D76 /* PrinciplesOfDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinciplesOfDesign.swift; sourceTree = "<group>"; };
 		8AFDC65226DE9F5D00BE2D76 /* PurposeOfArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeOfArt.swift; sourceTree = "<group>"; };
 		8AFDC66326DFE66100BE2D76 /* LCSArtCommunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCSArtCommunity.swift; sourceTree = "<group>"; };
+		9C31BE4026F16F1A00361C05 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		9C31BE4326F16F3900361C05 /* OnboardingViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewOne.swift; sourceTree = "<group>"; };
+		9C31BE4626F16F4900361C05 /* OnboardingViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewTwo.swift; sourceTree = "<group>"; };
+		9C31BE4926F16F5900361C05 /* OnboardingViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +190,7 @@
 		8AFDC58926DC923900BE2D76 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9C31BE3F26F16EF200361C05 /* Onboarding Views */,
 				8AFDC5DA26DE96A500BE2D76 /* CDSideMenuSrc */,
 				8AFDC58A26DC923900BE2D76 /* VirtualGallery2_0App.swift */,
 				8AFDC58C26DC924200BE2D76 /* Assets.xcassets */,
@@ -300,6 +313,17 @@
 			path = Concepts;
 			sourceTree = "<group>";
 		};
+		9C31BE3F26F16EF200361C05 /* Onboarding Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C31BE4026F16F1A00361C05 /* Main.swift */,
+				9C31BE4326F16F3900361C05 /* OnboardingViewOne.swift */,
+				9C31BE4626F16F4900361C05 /* OnboardingViewTwo.swift */,
+				9C31BE4926F16F5900361C05 /* OnboardingViewThree.swift */,
+			);
+			path = "Onboarding Views";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,7 +430,10 @@
 			files = (
 				8AFDC65C26DE9F5D00BE2D76 /* CriticalAnalysisProcess.swift in Sources */,
 				8AFDC66026DE9F5D00BE2D76 /* CreativeProcess.swift in Sources */,
+				9C31BE4126F16F1A00361C05 /* Main.swift in Sources */,
 				8AFDC5FA26DE96A600BE2D76 /* String.swift in Sources */,
+				9C31BE4A26F16F5900361C05 /* OnboardingViewThree.swift in Sources */,
+				9C31BE4426F16F3900361C05 /* OnboardingViewOne.swift in Sources */,
 				8AFDC62B26DE9C6F00BE2D76 /* ArtworkDetail.swift in Sources */,
 				8AFDC5D826DE95D900BE2D76 /* ArtPeriod.swift in Sources */,
 				8AFDC5F426DE96A500BE2D76 /* CDSideMenuConfiguration.swift in Sources */,
@@ -424,6 +451,7 @@
 				8AFDC5CB26DC9A4A00BE2D76 /* ArtHistoryView.swift in Sources */,
 				8AFDC5D526DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */,
 				8AFDC65A26DE9F5D00BE2D76 /* PostModernPrinciples.swift in Sources */,
+				9C31BE4726F16F4900361C05 /* OnboardingViewTwo.swift in Sources */,
 				8AFDC60F26DE984700BE2D76 /* ArtworksList.swift in Sources */,
 				8AFDC62E26DE9E1300BE2D76 /* Placeholder.swift in Sources */,
 				1903877426E022DF00845B4E /* ArtHistoryDetailView.swift in Sources */,
@@ -456,7 +484,10 @@
 			files = (
 				8AFDC65B26DE9F5D00BE2D76 /* CriticalAnalysisProcess.swift in Sources */,
 				8AFDC65F26DE9F5D00BE2D76 /* CreativeProcess.swift in Sources */,
+				9C31BE4226F16F1A00361C05 /* Main.swift in Sources */,
 				8AFDC5FB26DE96A600BE2D76 /* String.swift in Sources */,
+				9C31BE4B26F16F5900361C05 /* OnboardingViewThree.swift in Sources */,
+				9C31BE4526F16F3900361C05 /* OnboardingViewOne.swift in Sources */,
 				8AFDC62C26DE9C6F00BE2D76 /* ArtworkDetail.swift in Sources */,
 				8AFDC5D926DE95D900BE2D76 /* ArtPeriod.swift in Sources */,
 				8AFDC5F526DE96A500BE2D76 /* CDSideMenuConfiguration.swift in Sources */,
@@ -474,6 +505,7 @@
 				8AFDC5CC26DC9A4A00BE2D76 /* ArtHistoryView.swift in Sources */,
 				8AFDC5D626DE91D500BE2D76 /* SharedFunctionAndConstants.swift in Sources */,
 				8AFDC65926DE9F5D00BE2D76 /* PostModernPrinciples.swift in Sources */,
+				9C31BE4826F16F4900361C05 /* OnboardingViewTwo.swift in Sources */,
 				8AFDC61026DE984700BE2D76 /* ArtworksList.swift in Sources */,
 				8AFDC62F26DE9E1300BE2D76 /* Placeholder.swift in Sources */,
 				1903877526E022DF00845B4E /* ArtHistoryDetailView.swift in Sources */,
