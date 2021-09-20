@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingViewOne: View {
     var body: some View {
         if #available(iOS 15.0, *) {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).background(.blue)
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).background(Image("background1"))
         } else {
             // Fallback on earlier versions
             Text("Hello, World!")
