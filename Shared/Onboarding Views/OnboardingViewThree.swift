@@ -19,9 +19,6 @@ struct OnboardingViewThree: View {
                 }
             }
               
-                
-                
-            
             
 
             
