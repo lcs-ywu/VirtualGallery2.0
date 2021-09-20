@@ -34,7 +34,7 @@ struct ArtworkDetail: View {
     }
     
     // Fucntions to get recommanded artworks by artists and medium
-    // Need to debug the function.
+    // Need to debug the function
     func CreateRecommandStoreByArtist(artworkInput:Artwork) -> [Artwork] {
         var recommandStoreByArtist : [Artwork] = []
         
