@@ -9,11 +9,25 @@ import SwiftUI
 
 struct OnboardingViewTwo: View {
     var body: some View {
-        if #available(iOS 15.0, *) {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).background(.green)
-        } else {
-            // Fallback on earlier versions
-            Text("Hello, World!")
+        ZStack{
+            Image("Onboarding2").resizable().scaledToFill()
+                .ignoresSafeArea()
+            
+            if #available(iOS 15.0, *) {
+                VStack{
+                    Text("""
+     Explore the LCS art community
+     Get to know all about
+     our artists and their works
+     """).bold().foregroundColor(.white).font(.system(.title, design: .serif)).padding(.horizontal).multilineTextAlignment(.center)
+                    
+                    Image(systemName: "arrow.right.circle").resizable().frame(width: 50, height: 50).colorInvert()
+                }
+            } else {
+                // Fallback on earlier versions
+                Text("Fromat not supported")
+            }
+            
         }
     }
 }
