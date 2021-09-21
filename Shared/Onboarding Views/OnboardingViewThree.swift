@@ -9,24 +9,26 @@ import SwiftUI
 
 struct OnboardingViewThree: View {
     var body: some View {
-        if #available(iOS 15.0, *) {
-            VStack {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).background(.yellow)
-                Button(action: {
-                    ArtworksList()
-                }) {
-                    Text("Continue")
+        ZStack{
+            Image("Onboarding3").resizable().scaledToFill()
+                .ignoresSafeArea()
+            
+            if #available(iOS 15.0, *) {
+                VStack{
+                    Text("""
+     Try out more functions such
+     as save your favourite artworks
+     and tour around museums around the world
+     """).bold().foregroundColor(.white).font(.system(.title, design: .serif)).padding(.horizontal).multilineTextAlignment(.center)
+                    
+                    Image(systemName: "checkmark.circle").resizable().frame(width: 50, height: 50).colorInvert()
                 }
+            } else {
+                // Fallback on earlier versions
+                Text("Fromat not supported")
             }
-              
             
-
-            
-        } else {
-            // Fallback on earlier versions
-            Text("Hello, World")
         }
-        
     }
 }
 
