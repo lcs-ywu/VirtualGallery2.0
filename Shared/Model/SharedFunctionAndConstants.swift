@@ -144,6 +144,47 @@ struct NavigationBarModifier: ViewModifier {
         }
     }
 }
+var allArtworksCopy = allArtworks
+var allArtworksCopyShuffled = allArtworksCopy.shuffled()
+func getArtworksFromSameArtist(artist: String) -> [Artwork] {
+    var store: [Artwork] = []
+    
+    
+    for artwork in allArtworksCopyShuffled {
+        if artwork.artist == artist {
+            store.append(artwork)
+        }
+    }
+    return store
+}
+func getTwoRandomElement(artworks: [Artwork]) -> [Artwork] {
+    var store: [Artwork] = []
+    if artworks.count > 2 {
+
+
+        let firstElement = artworks[0]
+        let secondElement = artworks[1]
+
+
+        store.append(firstElement)
+        store.append(secondElement)
+        
+        return store
+    } else if artworks.count <= 2 {
+        return artworks
+    }
+    return store
+}
+
+
+func CreateRecommendStoreByArtist(artist: String) -> [Artwork] {
+    var recommendStoreByArtist : [Artwork] = getArtworksFromSameArtist(artist: artist)
+    
+
+    let elements = getTwoRandomElement(artworks: recommendStoreByArtist)
+
+    return elements
+}
 
 extension View {
  
@@ -368,13 +409,13 @@ Donald Clarence Judd was an American artist associated with minimalism (a term h
 let allArtworksOnDisplay = [
     // Artwork on display added here
     // Maybe using the property??
-    Artwork(name: "Fruit", artist: "James", yearCreated: 2020, description: "In this oil painting, I intend to discuss the thesis of time and vividness through the difference between the rotten loquat in front and the fresh fruits behind. I put much time and effort into trying to magnify the freshness and realism of the subjects inside the painting with shade and colour. This work is also my initiation of detailed realistic oil paintings.", more: "", onDisplay: false, museum: "LCS Gallery", latitude: 0, longitude: 0, medium: "Oil on canvas", LCSart: true),
+    Artwork(name: "Fruit", artist: "James Wu", yearCreated: 2020, description: "In this oil painting, I intend to discuss the thesis of time and vividness through the difference between the rotten loquat in front and the fresh fruits behind. I put much time and effort into trying to magnify the freshness and realism of the subjects inside the painting with shade and colour. This work is also my initiation of detailed realistic oil paintings.", more: "", onDisplay: false, museum: "LCS Gallery", latitude: 0, longitude: 0, medium: "Oil on canvas", LCSart: true),
     
-    Artwork(name: "Rumination", artist: "James", yearCreated: 2019, description: "The model in the photo is sitting on marble platform in a posture which demonstrates his muscle definition. Hence the sketch is a great exercise of studying anatomy and physical beauty.", more: "", onDisplay: true, museum: "LCS Gallery", latitude: 44.43922, longitude: -78.26571, medium: "Pencil and pastel on sketch paper", LCSart: true),
+    Artwork(name: "Rumination", artist: "James Wu", yearCreated: 2019, description: "The model in the photo is sitting on marble platform in a posture which demonstrates his muscle definition. Hence the sketch is a great exercise of studying anatomy and physical beauty.", more: "", onDisplay: true, museum: "LCS Gallery", latitude: 44.43922, longitude: -78.26571, medium: "Pencil and pastel on sketch paper", LCSart: true),
     
-    Artwork(name: "Harmony", artist: "James", yearCreated: 2019, description: "This pencil sketch of a skull is one of my practice during my anatomy studying. I intend to strengthen my understanding of the structure of human head through this drawing. I sharpen the contrast and add details such as tooth and the cracks with the sketching process.", more: "", onDisplay: true, museum: "LCS Gallery", latitude: 44.43922, longitude: -78.26571, medium: "Charcoal pencil on sketch paper", LCSart: true),
+    Artwork(name: "Harmony", artist: "James Wu", yearCreated: 2019, description: "This pencil sketch of a skull is one of my practice during my anatomy studying. I intend to strengthen my understanding of the structure of human head through this drawing. I sharpen the contrast and add details such as tooth and the cracks with the sketching process.", more: "", onDisplay: true, museum: "LCS Gallery", latitude: 44.43922, longitude: -78.26571, medium: "Charcoal pencil on sketch paper", LCSart: true),
     
-    Artwork(name: "Anton", artist: "James", yearCreated: 2020, description: "", more: "", onDisplay: true, museum: "LCS Gallery", latitude: 44.43922, longitude: -78.26571, medium: "Oil on canvas", LCSart: true),
+    Artwork(name: "Anton", artist: "James Wu", yearCreated: 2020, description: "", more: "", onDisplay: true, museum: "LCS Gallery", latitude: 44.43922, longitude: -78.26571, medium: "Oil on canvas", LCSart: true),
     
     Artwork(name: "Untitled Digital Painting 2", artist: "Hinako Hotta", yearCreated: 2020, description: "", more: "", onDisplay: true, museum: "LCS Gallery", latitude: 44.43922, longitude: -78.26571, medium: "Digital Painting", LCSart: true),
     

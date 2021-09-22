@@ -22,7 +22,8 @@ struct ArtworkDetail: View {
     @State private var validURL = URL(string: "https://www.russellgordon.ca/vg/Ocean%20Bliss.imageset/Ocean%20Bliss.jpg")
     
     //Magnification scale for the gesture
-    @State var scale: CGFloat = 2.0
+    
+    @GestureState var scale: CGFloat = 1.0
     
     //    @State var isFavourite: Bool
     // Used for the sharing button on the top right
@@ -33,22 +34,15 @@ struct ArtworkDetail: View {
         UIApplication.shared.windows.first?.rootViewController!.present(avc, animated: true, completion: nil)
     }
     
+    
     // Fucntions to get recommanded artworks by artists and medium
     // Need to debug the function.
-    func CreateRecommandStoreByArtist(artworkInput:Artwork) -> [Artwork] {
-        var recommandStoreByArtist : [Artwork] = []
-        
-        for artwork in allArtworks {
-            if artwork.artist == artworkInput.artist {
-                recommandStoreByArtist.append(artwork)
-            }
-        }
-        return recommandStoreByArtist
-    }
+    
     
     
     
     var body: some View {
+        let relatedArtworks = CreateRecommendStoreByArtist(artist: artwork.artist)
         
         ScrollView {
             
@@ -61,13 +55,12 @@ struct ArtworkDetail: View {
                     image
                         .resizable()
                         .scaledToFit()
-                    
-                    //Magnification gesture not working
+                        .scaleEffect(scale)
                         .gesture(MagnificationGesture()
-                                    .onChanged { value in
-                            self.scale = value.magnitude
-                        }
-                        )
+                                    .updating($scale, body: { (value, scale, trans) in
+                            scale = value.magnitude
+                        }))
+                    
                     
                 } placeholder: {
                     
@@ -101,13 +94,13 @@ struct ArtworkDetail: View {
                         
                             .onTapGesture {
                                 store.toggle(artwork)
-
+                                
                                 if artwork.isFavourite {
                                     store.add(artwork)
                                 } else {
                                     store.remove(artwork)
                                 }
-
+                                
                             }
                         
                     }
@@ -194,110 +187,85 @@ struct ArtworkDetail: View {
                 Spacer()
             }.padding(.horizontal)
             
-//            ScrollView(.horizontal) {
-//                HStack(spacing: 20) {
-//                    ForEach(0..<10) {
-//                        Text("Item \($0)")
-//                            .foregroundColor(.white)
-//                            .font(.largeTitle)
-//                            .frame(width: 200, height: 200)
-//                            .background(Color.red)
-//                    }
-//                }
-//            }
             
-            ScrollView(.horizontal) {
-                HStack(spacing: 20) {
-                    ForEach(CreateRecommandStoreByArtist(artworkInput: artwork))//0..<5   randomElement()
-                    {artwork in
-                        VStack{
+            
+            HStack {
+                ForEach(relatedArtworks) {
+                    artwork in
+                    
+                    if relatedArtworks.count >= 2 {
+                        
+                        
+                    
                             if #available(iOS 15.0, *) {
                                 AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
                                     image in
                                     
                                     image
                                         .resizable()
-                                        .scaledToFit().padding()
-                                    //                                        .frame(width: 44, height:44)
-                                    //                                            .cornerRadius(80)
-                                    
+                                        .scaledToFit()
                                 } placeholder: {
                                     Placeholder(shouldAnimate: $shouldAnimate)
                                 }
-                                
-                            } else {
-                                // Fallback on earlier versions
-                                Text("Image not supported with ios 14 or less")
                             }
-                            
-                            
-//                            Text(artwork.name).foregroundColor(.black).font(.system(.title2, design: .serif))
-//                            Spacer()
-                        }
+                        
+                        
+                        
+                        
+                        
+                    } else if relatedArtworks.count == 1 {
+                        
+                        
+                            if #available(iOS 15.0, *) {
+                                AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
+                                    image in
+                                    
+                                    image
+                                        .resizable()
+                                        .scaledToFit()
+                                } placeholder: {
+                                    Placeholder(shouldAnimate: $shouldAnimate)
+                                }
+                            }
+                        
+                        
+                    }
+                    else {
+                        Text("Sorry, this is the only artwork from this artist in our collection.")
                     }
                 }
             }
-//            ScrollView(.horizontal){
-//                randomElement(CreateRecommandStoreByArtist(artworkInput: artwork))
-//                ForEach(CreateRecommandStoreByArtist(artworkInput: artwork)) { artwork in
-//
-//                    NavigationLink(destination: ArtworkDetail(artwork: artwork)) {
-//                        VStack{
-//                            if #available(iOS 15.0, *) {
-//                                AsyncImage(url: URL(string: urlDictionary[artwork.name] ??  "https://www.russellgordon.ca/vg/%E5%8D%95%E9%9D%A2%E9%95%9C.imageset/%E5%8D%95%E9%9D%A2%E9%95%9C.jpg")) {
-//                                    image in
-//
-//                                    image
-//                                        .resizable()
-//                                        .scaledToFit().padding()
-//                                    //                                        .frame(width: 44, height:44)
-//                                    //                                            .cornerRadius(80)
-//
-//                                } placeholder: {
-//                                    Placeholder(shouldAnimate: $shouldAnimate)
-//                                }
-//
-//                            } else {
-//                                // Fallback on earlier versions
-//                                Text("Image not supported with ios 14 or less")
-//                            }
-//
-//
-//                            Text(artwork.name).foregroundColor(.black).font(.system(.title2, design: .serif))
-//                            Spacer()
-//                        }
-//                    }
-//                }
-//            }
-    }.navigationBarTitle(artwork.name)
-    //        .edgesIgnoringSafeArea(.top)
-    // Consider smooth transition?
-        .navigationBarHidden(isNavigationBarHidden)
-        .onTapGesture {
-            isNavigationBarHidden.toggle()
-        }
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: shareArtwork) {
-                    Image(systemName: "square.and.arrow.up")
-                }
-                
+            
+            
+        }.navigationBarTitle(artwork.name)
+        //        .edgesIgnoringSafeArea(.top)
+        // Consider smooth transition?
+            .navigationBarHidden(isNavigationBarHidden)
+            .onTapGesture {
+                isNavigationBarHidden.toggle()
             }
-        }
-        .onAppear {
-            if store.checkIfArtworkIsFavourite(artwork) == true {
-                if !artwork.isFavourite {
-                    store.toggle(artwork)
-                }
-            } else {
-                if artwork.isFavourite {
-                    store.toggle(artwork)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: shareArtwork) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    
                 }
             }
-        }
-    
-    
-}
+            .onAppear {
+                if store.checkIfArtworkIsFavourite(artwork) == true {
+                    if !artwork.isFavourite {
+                        store.toggle(artwork)
+                    }
+                } else {
+                    if artwork.isFavourite {
+                        store.toggle(artwork)
+                    }
+                }
+            }
+        
+        
+    }
 }
 
 

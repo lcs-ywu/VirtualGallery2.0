@@ -22,7 +22,7 @@ struct SearchView: View {
                     Form {
                         List {
                             Section(header: Text("Artworks").foregroundColor(.black)) {
-                                ForEach(filterArtworks(searchText: searchText, list: artworks.artworks), id: \.id) { artwork in
+                                ForEach(filterArtworks(searchText: searchText, list: artworks.artworks)) { artwork in
                                     NavigationLink(destination: ArtworkDetail(artwork: artwork)) {
                                         HStack{
                                             if #available(iOS 15.0, *) {
@@ -67,7 +67,7 @@ struct SearchView: View {
                     Form {
                         List {
                             Section(header: Text("Artworks").foregroundColor(.black)) {
-                                ForEach(artworks.artworks, id: \.id) { artwork in
+                                ForEach(artworks.artworks) { artwork in
                                     NavigationLink(destination: ArtworkDetail(artwork: artwork)) {
                                         HStack{
                                             if #available(iOS 15.0, *) {
