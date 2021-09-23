@@ -41,7 +41,7 @@ struct ArtworksList: View {
             
             
             ACarousel(store.artworksOnDisplay,
-                      spacing: 10,
+                      spacing: 8,
                       headspace: 10,
                       sidesScaling: 0.7,
                       isWrap: true
