@@ -16,8 +16,9 @@ class Artist: Identifiable {
     var artistStatement: String
     var LCSArtist: Bool
     var works: [String]
+    var link: String
     
-    init(name: String, age: String, identity: String, infor: String, artistStatement: String, LCSArtist: Bool, works:[String]) {
+    init(name: String, age: String, identity: String, infor: String, artistStatement: String, LCSArtist: Bool, works:[String], link: String) {
         self.name = name
         self.age = age
         self.identity = identity
@@ -25,6 +26,7 @@ class Artist: Identifiable {
         self.artistStatement = artistStatement
         self.LCSArtist = LCSArtist
         self.works = works
+        self.link = link
     }
     
     static let testArtist = Artist(name: "Leonardo da Vinci",
@@ -34,7 +36,7 @@ class Artist: Identifiable {
                                    artistStatement: "",
                                    LCSArtist: false,
                                    works: ["Mona Lisa",
-                                           "The Last Supper"])
+                                           "The Last Supper"], link: "https://www.leonardoda-vinci.org/#:~:text=Leonardo%20Da%20Vinci%20%2D%20The%20Complete%20Works%20%2D%20leonardoda%2Dvinci.org")
 }
 
 class ArtistsStore: ObservableObject {
@@ -86,6 +88,6 @@ func getHistoricArtist(artists: [Artist] , artistName: String) -> Artist {
     // Raise an error here
     print("Artist is not stored in the file, wrong artist name input")
     
-    return Artist(name: "Error", age: "404", identity: "Computational Error Designer", infor: "10001011", artistStatement: "00100100", LCSArtist: false, works: [])
+    return Artist(name: "Error", age: "404", identity: "Computational Error Designer", infor: "10001011", artistStatement: "00100100", LCSArtist: false, works: [], link: "no links available")
 }
 let testArtistStore = ArtistsStore()
